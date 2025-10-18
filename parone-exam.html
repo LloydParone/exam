@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore the World of IT</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      color: #fff;
+      background: radial-gradient(circle at 20% 20%, #0a0a2a, #000);
+      overflow-x: hidden;
+    }
+
+    /* ===== Stars ===== */
+    .stars {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+      animation: twinkle 15s infinite linear;
+      z-index: -1;
+      opacity: 0.8;
+    }
+
+    @keyframes twinkle {
+      from { background-position: 0 0; }
+      to { background-position: 1000px 1000px; }
+    }
+
+    /* ===== Header ===== */
+    header {
+      text-align: center;
+      padding: 100px 20px 60px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #9ecbff;
+      text-shadow: 0 0 20px #3f72ff;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #cfdcff;
+      max-width: 600px;
+      margin: 10px auto 0;
+    }
+
+    /* ===== Sections ===== */
+    .section {
+      width: 85%;
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(20, 20, 60, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 20px #003cffaa;
+      padding: 40px;
+      text-align: center;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .section:hover {
+      transform: scale(1.02);
+      background: rgba(30, 30, 90, 0.85);
+    }
+
+    .section h2 {
+      color: #80a8ff;
+      text-shadow: 0 0 15px #4d7fff;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      color: #e3e8ff;
+      font-size: 1.1em;
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      border-radius: 25px;
+      background: #407bff;
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #5a9bff;
+      box-shadow: 0 0 20px #5a9bff;
+      transform: scale(1.05);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      font-size: 1em;
+      color: #9fb4ff;
+      background: rgba(0, 0, 40, 0.8);
+    }
+
+    /* ===== Popup ===== */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(15, 15, 50, 0.95);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px #407bff;
+      text-align: center;
+      z-index: 1000;
+      width: 80%;
+      max-width: 400px;
+    }
+
+    .popup button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      background: #407bff;
+      color: white;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .popup button:hover {
+      background: #5a9bff;
+      box-shadow: 0 0 10px #5a9bff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <header>
+    <h1>🌌 Explore the World of Information Technology 🌌</h1>
+    <p>Join the cosmic journey of innovation, discovery, and creation in the universe of technology.</p>
+  </header>
+
+  <div class="section">
+    <h2>🚀 What is IT?</h2>
+    <p>Information Technology (IT) is the use of computers, networks, and systems to process, store, and share data. It connects the world — powering communication, business, healthcare, and entertainment.</p>
+    <button class="btn" onclick="openPopup('it')">Learn More</button>
+  </div>
+
+  <div class="section">
+    <h2>🪐 Why IT Matters Today</h2>
+    <p>From AI assistants to cloud computing, IT drives the world forward. It helps solve problems faster, connects millions, and opens endless opportunities for creative minds.</p>
+    <button class="btn" onclick="openPopup('why')">See Why</button>
+  </div>
+
+  <div class="section">
+    <h2>💻 Careers in IT</h2>
+    <p>The IT field is full of exciting roles: cybersecurity experts, game developers, data scientists, and more. The future belongs to those who can turn ideas into code!</p>
+    <button class="btn" onclick="openPopup('career')">Explore Careers</button>
+  </div>
+
+  <div class="section">
+    <h2>🌠 Why Choose IT as a Career?</h2>
+    <p>Choosing IT means choosing a future of creativity and growth. You get to shape the tools of tomorrow and impact how people live, learn, and connect.</p>
+    <button class="btn" onclick="openPopup('choose')">Start Your Journey</button>
+  </div>
+
+  <footer>
+    <p>Created by <strong>Christian Lloyd Parone</strong> | © 2025 Bachelor of Science in Informatiom Technology | Colegio de San Juan de Letran Calamba</p>
+  </footer>
+
+  <!-- ===== Popups ===== -->
+  <div id="popup-it" class="popup">
+    <h3>🚀 Information Technology</h3>
+    <p>IT is the foundation of modern progress — helping humans reach new digital frontiers. It’s in every click, every system, every connection.</p>
+    <button onclick="closePopup('it')">Close</button>
+  </div>
+
+  <div id="popup-why" class="popup">
+    <h3>🪐 Why IT Matters</h3>
+    <p>In this digital era, IT keeps the world spinning. From social media to virtual classrooms, IT connects us beyond distance and time.</p>
+    <button onclick="closePopup('why')">Close</button>
+  </div>
+
+  <div id="popup-career" class="popup">
+    <h3>💻 Careers in IT</h3>
+    <p>IT jobs are everywhere! Whether you dream of designing apps, securing systems, or analyzing data, there’s a place for you in the IT galaxy.</p>
+    <button onclick="closePopup('career')">Close</button>
+  </div>
+
+  <div id="popup-choose" class="popup">
+    <h3>🌠 Choose IT</h3>
+    <p>With IT, you can create, innovate, and explore without limits. It’s the path of discovery — where imagination meets technology.</p>
+    <button onclick="closePopup('choose')">Close</button>
+  </div>
+
+  <script>
+    function openPopup(id) {
+      document.getElementById('popup-' + id).style.display = 'block';
+    }
+    function closePopup(id) {
+      document.getElementById('popup-' + id).style.display = 'none';
+    }
+  </script>
+</body>
+</html>
